@@ -61,9 +61,7 @@ public class Day2 {
             }
 
             if((password.password.charAt(password.min - 1) == password.policy
-            || password.password.charAt(password.max - 1) == password.policy)
-            && !(password.password.charAt(password.min - 1) == password.policy
-            && password.password.charAt(password.max - 1) == password.policy)) {
+            ^ password.password.charAt(password.max - 1) == password.policy)) {
                 validPasswords++;
             }
         });
